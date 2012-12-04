@@ -1,0 +1,74 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\usepackage{hyperref}
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\huge\bf Ang Way Chuang}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft.5\hoffset\centerline{\footnotesize 11, Lorong Gemilang Indah 2}
+ \moveleft.5\hoffset\centerline{\footnotesize Taman Gemilang Indah}
+ \moveleft.5\hoffset\centerline{\footnotesize 14000, Bukit Mertajam, Penang}
+ \moveleft.5\hoffset\centerline{\footnotesize +(60) 018 3267697}
+ \moveleft.5\hoffset\centerline{\footnotesize \href{mailto:wcang79@gmail.com}{wcang79@gmail.com}}
+
+
+\begin{resume}
+ 
+\section{OBJECTIVE}  A position in the field of computer programming with special 
+                interests in Linux system programming, Linux kernel development and networking.
+ 
+
+\section{EDUCATION} {\sl Master of Science} Computer Science (Satellite Communication) \\
+		Universiti Sains Malaysia \\
+		{\sl Bachelor of Science} Computer Science (Networking) \\
+		Universiti Putra Malaysia
+                      % \sl will be bold italic in New Century Schoolbook (or
+	              % any postscript font) and just slanted in
+		      %	Computer Modern (default) font
+
+
+\section{EXPERIENCE} {\sl Research Associate} \hfill October 2010 - March 2012 \\
+                Shonan Fujisawa Campus, Keio University, Kanagawa
+                 \begin{itemize}  \itemsep -2pt %reduce space between items
+		 \item Responsible for the operation and maintainence of \href{http://www.soi.asia}{SOI Asia} online lecture system.
+                 \item Maintained and troubleshoot internal cloud system.
+		 \item Conducted research on IPv6 multicast system.
+                \end{itemize}
+ 
+                {\sl Research Officer} \hfill            September 2005 - April 2010 \\
+                School of Computer Sciences, Universiti Sains Malaysia
+                 \begin{itemize}  \itemsep -2pt %reduce space between items
+		 \item Conducted research on \href{http://tools.ietf.org/html/rfc3095}{ROHC} and IP network using DVB-S communication
+				 and developed a prototype system.
+		 \item Involved in embedded system (IXP435) development for WiMAX prototype system.
+		 \item Involved in operation of SOI Asia lecture on behalf of USM.
+                 \end{itemize} 
+                {\sl Junior Software Engineer} \hfill        September 2004 - August 2005 \\
+                 CEO Consultancy, Kajang
+                  \begin{itemize}
+                   \item Developed and maintained camera surveillance server system for smartvue project.
+	           \item Developed for camera surveillance video recorder system using single board computer (SBC).
+                   \end{itemize} 
+ 		{\sl Linux Software Engineer} \hfill        March 2004 -  August 2004 \\
+                 Green Packet, Technology Park Malaysia
+                  \begin{itemize}
+                   \item Conducted research and development on firewall, Internet gateway and Radius protocol.
+	           \item Developed and maintained webmin interface for Green Packet's gateway product.
+		   \item Enhanced existing 802.1X authenticator
+                   \end{itemize} 
+\section{COMPUTER \\ SKILLS} {\sl Languages \& Software:} Python, C, BASH, Javascript, Vim, Latex, Git, autotools, gdb and various kind of development tools on Linux system.\\
+                {\sl Operating Systems:} Linux, Linux and Linux
+	\end{resume} 
+\end{document}
+
+
+
+
