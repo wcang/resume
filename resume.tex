@@ -1,25 +1,39 @@
 % LaTeX resume using res.cls
 \documentclass[margin]{res}
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+%\usepackage{newcent}   % uses new century schoolbook postscript font
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+\usepackage{ifsym}
+\usepackage{marvosym} % Required for symbols in the colored box
 \usepackage{hyperref}
 \setlength{\textwidth}{5.1in} % set width of text portion
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+\definecolor{light-gray}{gray}{0.9}
 
 \begin{document}
 
 % Center the name over the entire width of resume:
- \moveleft.5\hoffset\centerline{\huge\bf Ang Way Chuang}
+\begin{minipage}[t]{0.7\textwidth}
+\moveleft.5\hoffset\centerline{\huge\bf Ang Way Chuang}
+\end{minipage}
 % Draw a horizontal line the whole width of resume:
- \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
 % address begins here
 % Again, the address lines must be centered over entire width of resume:
- \moveleft.5\hoffset\centerline{\footnotesize 11, Lorong Gemilang Indah 2}
- \moveleft.5\hoffset\centerline{\footnotesize Taman Gemilang Indah}
- \moveleft.5\hoffset\centerline{\footnotesize 14000, Bukit Mertajam, Penang}
- \moveleft.5\hoffset\centerline{\footnotesize +(60) 018 3267697}
- \moveleft.5\hoffset\centerline{\footnotesize \href{mailto:wcang79@gmail.com}{wcang79@gmail.com}}
+\begin{minipage}[t]{0.3\textwidth}
+\colorbox{light-gray}{
+\begin{tabular}{cl} 
+	{\textifsymbol{18}} & \footnotesize 11, Lorong Gemilang Indah 2 \\
+ & \footnotesize Taman Gemilang Indah \\
+ & \footnotesize 14000, Bukit Mertajam, Penang \\
+ {\Mobilefone} & \footnotesize +(60) 018 3267697 \\
+ {\Letter} & \footnotesize \href{mailto:wcang79@gmail.com}{wcang79@gmail.com} \\
+\end{tabular}
+ }
+\end{minipage}
 
-
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
 \begin{resume}
  
 \section{OBJECTIVE}  A position in the field of computer programming with special 
@@ -39,8 +53,8 @@
                 Shonan Fujisawa Campus, Keio University, Kanagawa
                  \begin{itemize}  \itemsep -2pt %reduce space between items
 		 \item Responsible for the operation and maintainence of \href{http://www.soi.asia}{SOI Asia} online lecture system.
-                 \item Maintained and troubleshoot internal cloud system.
-		 \item Conducted research on IPv6 multicast system.
+                 \item Setup and maintained cloud management system.
+		 \item Conducted research on IP multicast system and developed a multicast tracer system.
                 \end{itemize}
  
                 {\sl Research Officer} \hfill            September 2005 - April 2010 \\
@@ -48,14 +62,16 @@
                  \begin{itemize}  \itemsep -2pt %reduce space between items
 		 \item Conducted research on \href{http://tools.ietf.org/html/rfc3095}{ROHC} and IP network using DVB-S communication
 				 and developed a prototype system.
+		 \item Responsible for the development and deployment of Satellite Receiver System using 
+			 \href{http://tools.ietf.org/html/rfc3077}{LLTM} for the \href{http://www.ai3.net}{AI3} project
 		 \item Involved in embedded system (IXP435) development for WiMAX prototype system.
 		 \item Involved in operation of SOI Asia lecture on behalf of USM.
                  \end{itemize} 
                 {\sl Junior Software Engineer} \hfill        September 2004 - August 2005 \\
-                 CEO Consultancy, Kajang
+                 CEO Consultancy, Kota Kemuning
                   \begin{itemize}
-                   \item Developed and maintained camera surveillance server system for smartvue project.
-	           \item Developed for camera surveillance video recorder system using single board computer (SBC).
+                   \item Developed and maintained camera surveillance server system for SmartVue project.
+	           \item Developed for camera surveillance video recorder system.
                    \end{itemize} 
  		{\sl Linux Software Engineer} \hfill        March 2004 -  August 2004 \\
                  Green Packet, Technology Park Malaysia
@@ -64,8 +80,8 @@
 	           \item Developed and maintained webmin interface for Green Packet's gateway product.
 		   \item Enhanced existing 802.1X authenticator
                    \end{itemize} 
-\section{COMPUTER \\ SKILLS} {\sl Languages \& Software:} Python, C, BASH, Javascript, Vim, Latex, Git, autotools, gdb and various kind of development tools on Linux system.\\
-                {\sl Operating Systems:} Linux, Linux and Linux
+\section{COMPUTER \\ SKILLS} {\sl Languages \& Software:} Python, C, Bash, Javascript, Vim, Git, autotools, gdb and various kind of development tools on Linux system.\\
+                {\sl Operating Systems:} Linux, Linux and Linux only
 	\end{resume} 
 \end{document}
 
