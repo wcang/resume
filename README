@@ -1,0 +1,5 @@
+Dependencies on Fedora 18
+-------------------------
+- texlive-marvosym
+- texlive-ifsym
+- resume class from http://www.ctan.org/pkg/res
